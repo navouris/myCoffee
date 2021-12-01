@@ -3,10 +3,15 @@
 # επιλογής ροφήματος και πληρωμής, ενημερώνοντας τη βάση δεδομένων.
 # Επίσης υλοποιεί κλήση της βάσης δεδομένω (με χρήση του db.py).
 # όταν καλείται υλοποιεί τα συμβάντα μιας τυχαίας μέρας που ορίζεται κατά την κλήση και παράγει
-# συνολικό report των συμβάντων της ημέρας.
+# συνολικό report των συμβάντων της ημέρας. Για μελλοντική χρήση από ένα πρόγραμμα
+# προσομοίωσης λειτουργίας πολλών μηχανών παράγει συνοπτική έκθεση της ημέρας, με 
+# στοχεία όπως το ταμειακό υπόλοιπο της μέρας, το συνολικό κέρδος, σύνολο πωλήσεων και
+# σύνολο αποτυχημένων πωλήσεων (περιπτώσεις που δεν είχε η μηχανή να δώσει ρέστα).
 
 import random
 import db
+
+DATABASE_FILE = "myCoffee7.db"
 
 class Drink():
     panel = {}
@@ -14,7 +19,6 @@ class Drink():
         self.id = str(id)
         self.description = description
         self.price = int(price)
-        self.stats = {}
         self.machineID = machineID
         Drink.panel[self.id] = self
 
@@ -60,7 +64,7 @@ class Drink():
             if toPay <= 0: break # έχει πληρωθεί το ποσόν
 
         if toPay < 0:
-            whatHappened = Coin.giveRest(self.price, self.paid)
+            whatHappened = Coin.giveRest(self.price, self.paid, self.machineID)
             message(whatHappened[1])
         if whatHappened and whatHappened[0]: 
             print('Απολαύστε το ρόφημά σας....')
@@ -94,7 +98,7 @@ class Coin():
         print(30*'=')
     
     @staticmethod
-    def giveRest(drinkPrice, paid):
+    def giveRest(drinkPrice, paid, machine):
         '''μέθοδος που για ορισμένο ποσό που πρέπει να πληρωθεί (drinkPrice), ελέγχει αν έχει
         ρέστα να δώσει, αν ναι, παραλαμβάνει τα νομισματα της λίστας paid, και επιστρέφει τα ρέστα
         αν όχι, επιστρέφει τα νομίσματα της paid και στέλνει αντίστοιχο μήνυμα, ότι δεν προχωράει
@@ -129,6 +133,7 @@ class Coin():
             restCoins = {}
             for coin in paid:
                 restCoins[coin] = restCoins.get(coin, 0) + 1
+            machine.report['fail'] += 1
             return (False, restCoins)
 
     def __init__(self, description, value, ammount):
@@ -139,9 +144,10 @@ class Coin():
 
 class Controller():
     def __init__(self, newDate, id):
-        self.db = db.DataModel("myCoffee7.db")
+        self.db = db.DataModel(DATABASE_FILE)
         self.id = id
         self.loadData()
+        self.report = {'sales':0, 'cash':0, 'drinks':0, 'fail':0}
         self.date = newDate
         self.reporting("ΑΡΧΙΚΟ")
         self.run()
@@ -164,18 +170,29 @@ class Controller():
         ########### Καταγραφή κατάστασης από τη βάση δεδομένων ####
         print(20*"=", txt, 25*"=")
         report = self.db.readTable('capacity', machine=self.id)
-        print('CASHIER Report')
+        out = f'ΤΑΜΕΙΟ - κλείσιμο ημέρας {self.date} ΜΗΧΑΝΗ: {self.id} \n'
+        cash = 0
         for item in report:
-            print(Coin.cashier[item['value']].description, item['current'])
+            out += f"{Coin.cashier[item['value']].description}\t {item['current']}\n"
+            cash += item['value']*item['current']
+        out +=  f"ΣΥΝΟΛΟ ΤΑΜΕΙΟΥ ημέρας {self.date} ΜΗΧΑΝΗ {self.id} ΕΙΝΑΙ: {cash/100:.2f}"
+        self.report['cash'] = cash/100
+        print(out)
         report = self.db.readTable('buy', machine=self.id)
         Coin.printCashier()
         if txt:
             total = 0
-            print('SALES Report')
+            drinks = 0
+            out = f'\nSALES Report Μηχανής {self.id} Ημέρα: {self.date}\n'
             for item in report:
-                print(item['datetime'], Drink.panel[str(item['productid'])].description, f"{item['cost']/100:.2f}€")
-                total += item['cost']
-            print(f"ΣΥΝΟΛΟ ΠΩΛΗΣΕΩΝ ΓΙΑ ΤΗΝ ΗΜΕΡΑ {self.date} ΤΗΣ ΜΗΧΑΝΗΣ {self.id} EINAI: {total/100:.2f}€")
+                if self.date in item['datetime']:
+                    out += f"{item['datetime']}\t{Drink.panel[str(item['productid'])].description}\t{item['cost']/100:.2f}€\n"
+                    total += item['cost']
+                    drinks += 1
+            out += f"ΣΥΝΟΛΟ ΠΩΛΗΣΕΩΝ ημέρας {self.date} ΜΗΧΑΝΗ {self.id} EINAI: {total/100:.2f}€\n\n"
+            self.report['sales'] = total/100
+            self.report['drinks'] = drinks
+            print(out)
         print(50*"=")
 
     def run(self):
@@ -192,6 +209,7 @@ class Controller():
             if selection in Drink.panel.keys():
                 selected = Drink.panel[selection]
                 selected.buy()
+        print(self.report)
 
 # main program
 if __name__ == "__main__": # τρέξε το πρόγραμμα από CLI

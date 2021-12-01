@@ -11,4 +11,4 @@ A project of development of a vending machine using Python standard modules, in 
 7. multiple machines in database
 8. tkinter multiple machines interface and simulator
 
-Start reading the [handouts](readme/myCoffeeMaker.md)
+Start reading the [handouts](./readme/myCoffeeMaker.md)
