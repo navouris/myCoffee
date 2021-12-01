@@ -1,6 +1,6 @@
 # MyCoffee project
 
-A project of development of a vending machine using Python standard modules, in 8 steps
+A project of development of a vending machine in 8 steps
 
 1. plain Python single machine operation
 2. functions-lists-dictionaries single machine
@@ -11,4 +11,3 @@ A project of development of a vending machine using Python standard modules, in 
 7. multiple machines in database
 8. tkinter multiple machines interface and simulator
 
-Start reading the [handouts](readme/myCoffeeMaker.md)
