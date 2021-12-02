@@ -18,13 +18,17 @@ def menu():
     while True:
         reply = input("Επιλέξτε ρόφημα (1-4) ή 0 για έξοδο: ")
         if reply in drinks.keys() or reply == '0': break
-    return int(reply)
+    return reply
 
 def process_payment(selection):
     '''μηχανισμός πληρωμής με βάση την επιλογή του χρήστη'''
-    msg_currencies = '\nΠαρακαλώ εισάγετε .10, .20, .50, 1, 2, 5 :'
-    to_pay = drinks[str(selection)][1]
-    print(f'\nΈχει παραγγελθεί: {drinks[str(selection)][0]}\n')
+    # msg_currencies = '\nΠαρακαλώ εισάγετε .10, .20, .50, 1, 2, 5 :'
+    msg_currencies = '\nΠαρακαλώ εισάγετε '
+    for currency in sorted(currencies):
+        msg_currencies += f"{currency/100:.2f}, "
+    msg_currencies = msg_currencies.rstrip(", ") + "€ :"
+    to_pay = drinks[selection][1]
+    print(f'\nΈχει παραγγελθεί: {drinks[selection][0]}\n')
     while True:
         try:
             new_payment = int(float(input(msg_currencies))*100)
@@ -43,7 +47,8 @@ def manage_rest(rest, cancel=False):
     # TODO: να υλοποιήσουμε τη δυνατότητα ακύρωσης παραγγελίας ενώ γίνεται η πληρωμή
     if rest: 
         print(f'Παρακαλώ παραλάβετε {rest/100:.2f} ρέστα...')
-        for currency in sorted(currencies[:-1], reverse=True ):
+        reverse_sorted_currencies = sorted(currencies, reverse=True )
+        for currency in reverse_sorted_currencies[:-1]:
             quantity = rest//currency
             if quantity: 
                 print(f'ρέστα: {quantity} x {currency/100:.2f}€')
@@ -55,5 +60,5 @@ def manage_rest(rest, cancel=False):
 if __name__ == "__main__":
     while True:
         user_selection = menu()
-        if not user_selection: break
+        if user_selection == "0": break
         process_payment(user_selection)
