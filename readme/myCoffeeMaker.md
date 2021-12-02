@@ -739,7 +739,7 @@ if __name__ == '__main__':
 
 Δημιουργούμε μια βάση δεδομένων με το εξής σχήμα:
 
-<img src='./coffee_v6/db/coffeeMaker-ERD-v1.png'>
+<img src='coffeeMaker-ERD-v1.png'>
 
 Η βάση αυτή δεδομένων έχει τους εξής πίνακες:
 
