@@ -74,7 +74,6 @@ class Map(tk.Frame):
             messagebox.showerror('Προσοχή', "Σφάλμα επαναφοράς δεδομένων προσομοίωσης")
     
     def showDate(self, date=None):
-        print(date, type(date))
         if date:
             self.date = date
         d = f"{self.date.day}-{months[self.date.month]}-{self.date.year}"
@@ -85,10 +84,8 @@ class Map(tk.Frame):
             self.canvas.itemconfig(self.simDate, text=d)
 
     def selectDate(self, e):
-        print(e.x, e.y)
         today = self.date
         def handleDate():
-            print(cal.selection_get())
             self.showDate(cal.selection_get())
             self.cal.destroy()
         self.cal = tk.Toplevel(root)
@@ -102,7 +99,6 @@ class Map(tk.Frame):
         for id,machine in self.machines.items():
             self.mapping[id] = self.canvas.create_image(machine['x'], machine['y'], image = self.coffeImg)
             self.canvas.create_text(machine['x'], machine['y']-35, text=machine["place"], fill='red')
-        print(self.mapping)
 
     def readMachines(self):
         self.machines = {}
@@ -138,7 +134,6 @@ class Map(tk.Frame):
                 if machine not in self.report: self.report[machine] = {}
                 machineRun = sim.Controller(day.strftime("%Y-%m-%d"), machine)
                 self.report[machine][day.strftime("%Y-%m-%d")] = machineRun.report
-        print(self.report)
 
     def showMachine(self, e):
         print(e.x, e.y)
@@ -155,10 +150,10 @@ class Map(tk.Frame):
 
     def showMachineResults(self, m):
         if self.report:
-            out = f"Κατάσταση μηχανής:{self.machines[m]['place']}\n{45*'-'}\nΗμερομηνία\tΤαμείο\tΠωλήσεις\n"
+            out = f"Κατάσταση μηχανής:{self.machines[m]['place']}\n{45*'-'}\nΗμερομηνία  Ταμείο  Πωλήσεις  Ποτά  Αποτυχίες\n"
             for d in sorted(self.report[m]):
                 print(d, self.report[m][d])
-                out += f"{d}\t{self.report[m][d]['cash']:8.2f}\t{self.report[m][d]['sales']:8.2f}\n"
+                out += f"{d}  {self.report[m][d]['cash']:8.2f}  {self.report[m][d]['sales']:8.2f} {self.report[m][d]['drinks']:6d} {self.report[m][d]['fail']:6d}\n"
         else:
             out = f"Δεν υπάρχουν δεδομένα προσομοίωσης λειτουργίας της μηχανής"
         if self.shownMachine in self.canvas.find_all():

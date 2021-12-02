@@ -1457,106 +1457,20 @@ numberDrinks = random.randint(10,50) #sell between 10 and 50 drinks daily
 
 και παράγεται η τελική έκθεση:
 ```txt
-SALES Report
-1821-03-25 20:41:51 Καφές 1.50€
-1821-03-25 07:07:23 Καφές 1.50€
-1821-03-25 12:58:20 Σοκολάτα με γάλα 2.40€
-1821-03-25 23:51:51 Καφές 1.50€
-1821-03-25 17:24:27 Σοκολάτα 2.10€
-1821-03-25 23:23:33 Σοκολάτα 2.10€
-1821-03-25 19:17:17 Καφές 1.50€
-1821-03-25 17:37:26 Σοκολάτα 2.10€
-1821-03-25 11:25:02 Καφές 1.50€
-1821-03-25 08:36:24 Καφές με γάλα 1.80€
-1821-03-25 03:27:51 Καφές 1.50€
-1821-03-25 18:45:42 Καφές 1.50€
-1821-03-25 19:10:35 Σοκολάτα με γάλα 2.40€
-1821-03-25 14:08:23 Καφές 1.50€
-1821-03-25 05:27:26 Καφές με γάλα 1.80€
-1821-03-25 01:48:14 Καφές 1.50€
-1821-03-25 16:08:39 Σοκολάτα 2.10€
-1821-03-25 09:09:09 Σοκολάτα 2.10€
-1821-03-25 07:56:03 Σοκολάτα με γάλα 2.40€
-1821-03-25 02:57:43 Σοκολάτα 2.10€
-1821-03-25 15:17:37 Καφές 1.50€
-1821-03-25 19:46:11 Καφές με γάλα 1.80€
-1821-03-25 06:39:41 Σοκολάτα 2.10€
-1821-03-25 06:42:05 Καφές με γάλα 1.80€
-1821-03-25 01:36:05 Σοκολάτα 2.10€
-1821-03-25 02:10:50 Καφές με γάλα 1.80€
-1821-03-25 14:52:58 Σοκολάτα με γάλα 2.40€
-1821-03-25 10:49:25 Σοκολάτα 2.10€
-1821-03-25 15:48:25 Σοκολάτα με γάλα 2.40€
-1821-03-25 07:03:36 Σοκολάτα με γάλα 2.40€
-1821-03-25 00:14:18 Σοκολάτα με γάλα 2.40€
-1821-03-25 06:04:03 Καφές με γάλα 1.80€
-1821-03-25 03:04:37 Σοκολάτα 2.10€
-1821-03-25 19:53:32 Σοκολάτα 2.10€
-1821-03-25 06:41:16 Σοκολάτα 2.10€
-1821-03-25 04:58:05 Σοκολάτα 2.10€
-1821-03-25 18:40:02 Σοκολάτα με γάλα 2.40€
-1821-03-25 13:27:57 Σοκολάτα με γάλα 2.40€
-1821-03-25 10:37:48 Καφές με γάλα 1.80€
-1821-03-25 06:48:56 Καφές με γάλα 1.80€
-1821-03-25 06:24:26 Καφές με γάλα 1.80€
-1821-03-25 23:10:20 Σοκολάτα 2.10€
-1821-03-25 12:21:54 Καφές με γάλα 1.80€
-1821-03-25 17:51:11 Καφές 1.50€
-1821-03-25 18:17:37 Καφές 1.50€
-1821-03-25 08:02:48 Καφές 1.50€
-1821-03-25 00:55:47 Σοκολάτα 2.10€
-1821-03-25 10:16:41 Σοκολάτα με γάλα 2.40€
-1821-03-25 03:47:09 Καφές 1.50€
-1821-03-25 16:18:57 Σοκολάτα 2.10€
-1821-03-25 21:24:43 Σοκολάτα με γάλα 2.40€
-1821-03-25 11:31:05 Σοκολάτα 2.10€
-1821-03-25 04:16:37 Καφές 1.50€
-1821-03-25 09:02:33 Σοκολάτα με γάλα 2.40€
-1821-03-25 13:56:38 Σοκολάτα 2.10€
-1821-03-25 03:29:34 Καφές 1.50€
-1821-03-25 00:27:03 Σοκολάτα με γάλα 2.40€
-1821-03-25 01:49:22 Καφές με γάλα 1.80€
-1821-03-25 17:45:07 Σοκολάτα 2.10€
-1821-03-25 00:41:01 Σοκολάτα με γάλα 2.40€
-1821-03-25 22:08:30 Καφές με γάλα 1.80€
-1821-03-25 22:43:58 Σοκολάτα 2.10€
-1821-03-25 08:40:34 Καφές με γάλα 1.80€
-1821-03-25 23:01:04 Καφές 1.50€
-1821-03-25 16:16:09 Σοκολάτα με γάλα 2.40€
-1821-03-25 20:44:03 Καφές 1.50€
-1821-03-25 04:18:41 Σοκολάτα με γάλα 2.40€
-1821-03-25 06:05:14 Σοκολάτα με γάλα 2.40€
-1821-03-25 10:04:34 Σοκολάτα 2.10€
-1821-03-25 09:07:57 Καφές με γάλα 1.80€
-1821-03-25 12:11:32 Σοκολάτα με γάλα 2.40€
-1821-03-25 10:53:09 Καφές 1.50€
-1821-03-25 06:06:05 Καφές 1.50€
-1821-03-25 23:37:18 Σοκολάτα 2.10€
-1821-03-25 01:44:48 Καφές 1.50€
-1821-03-25 13:28:57 Καφές 1.50€
-1821-03-25 05:14:30 Σοκολάτα με γάλα 2.40€
-1821-03-25 21:41:19 Καφές με γάλα 1.80€
-1821-03-25 00:30:35 Σοκολάτα 2.10€
-1821-03-25 06:40:44 Καφές με γάλα 1.80€
-1821-03-25 20:07:25 Καφές 1.50€
-1821-03-25 19:44:35 Σοκολάτα με γάλα 2.40€
-1821-03-25 10:45:17 Σοκολάτα 2.10€
-1821-03-25 02:54:20 Σοκολάτα με γάλα 2.40€
-1821-03-25 11:27:46 Καφές με γάλα 1.80€
-1821-03-25 09:53:24 Καφές 1.50€
-1821-03-25 09:04:55 Καφές 1.50€
-1821-03-25 17:12:29 Καφές με γάλα 1.80€
-1821-03-25 09:27:37 Καφές με γάλα 1.80€
-1821-03-25 09:04:38 Καφές με γάλα 1.80€
-1821-03-25 14:03:26 Καφές 1.50€
-1821-03-25 19:22:17 Καφές με γάλα 1.80€
-1821-03-25 19:08:38 Σοκολάτα 2.10€
-1821-03-25 18:35:46 Καφές με γάλα 1.80€
-1821-03-25 02:34:21 Καφές με γάλα 1.80€
-1821-03-25 04:13:24 Σοκολάτα με γάλα 2.40€
-1821-03-25 15:39:17 Σοκολάτα 2.10€
-1821-03-25 08:53:56 Σοκολάτα 2.10€
-ΣΥΝΟΛΟ ΠΩΛΗΣΕΩΝ ΓΙΑ ΤΗΝ ΗΜΕΡΑ 1821-03-25 ΤΗΣ ΜΗΧΑΝΗΣ 1 EINAI: 189.90€
+
+SALES Report Μηχανής 1 Ημέρα: 1821-03-25
+1821-03-25 03:40:38     Σοκολάτα        2.10€
+1821-03-25 18:29:49     Σοκολάτα με γάλα        2.40€
+1821-03-25 02:10:07     Καφές με γάλα   1.80€
+1821-03-25 12:18:06     Σοκολάτα με γάλα        2.40€
+1821-03-25 20:22:32     Καφές με γάλα   1.80€
+ΣΥΝΟΛΟ ΠΩΛΗΣΕΩΝ ημέρας 1821-03-25 ΜΗΧΑΝΗ 1 EINAI: 10.50€
+
+Τελική έκθεση
+sales    10.5
+cash     98.5
+drinks   5
+fail     9
 
 ```
 
@@ -1759,7 +1673,12 @@ class Controller():
             self.report['sales'] = total/100
             self.report['drinks'] = drinks
             print(out)
+        if txt == "ΤΕΛΙΚΟ": 
+            print("Τελική έκθεση")
+            for i,k in self.report.items():
+                print(i,"\t", k)
         print(50*"=")
+
 
     def run(self):
         # κύριος βρόχος - μενού
@@ -1775,8 +1694,7 @@ class Controller():
             if selection in Drink.panel.keys():
                 selected = Drink.panel[selection]
                 selected.buy()
-        print(self.report)
-
+        
 # main program
 if __name__ == "__main__": # τρέξε το πρόγραμμα από CLI
     loader = Controller('1821-03-25', 1)
@@ -1793,13 +1711,295 @@ if __name__ == "__main__": # τρέξε το πρόγραμμα από CLI
 
 <img src='simulator.png'>
 
-Στην εικόνα αυτή φαίνεται μια τυπική χρήση του προσομοιωτή. Στο πάνω μέρος φαίνεται το πλαίσιο επιλογής ημερομηνίας προσομοίωησης, και στη συνέχεια τρείς επιλογές: settings, reset, run
+Στην εικόνα αυτή φαίνεται μια τυπική χρήση του προσομοιωτή. Στο πάνω μέρος φαίνεται το πλαίσιο επιλογής ημερομηνίας προσομοίωησης, και στη συνέχεια τρείς επιλογές: settings, reset, run.
 
 Επίσης φαίνεται ότι σε κάθε σημείο που με βάση τις συντεταγμένες υπάρχει μηχανή του καφέ, εμφανίζεται ένα σύμβολο και το όνομα της μηχανής (η τιμή του γνωρίσματος place του πίνακα των μηχανών).
 
-Επίσης φαίνεται πληροφορία για μια συγκεκριμένη μηχανή (Thessaloniki) που περιγράφει τις πωλήσεις της για 4 διαδοχικές μέρες που έτρεξε η προσομοίωση, καθώς και ταμειακό υπόλοιπο στο τέλος κάθε αντίστοιχης μέρας.
+Στην εικόνα επίσης φαίνεται πληροφορία για μια συγκεκριμένη μηχανή (Thessaloniki) που περιγράφει τις πωλήσεις της για 4 διαδοχικές μέρες που έτρεξε η προσομοίωση, καθώς και ταμειακό υπόλοιπο στο τέλος κάθε αντίστοιχης μέρας.
 
 Πάμε στη συνέχεια να δούμε βήμα-βήμα πώς αναπτύξαμε αυτή την εφαρμογή.
 
+Αρχικά δημιουργούμε τη γραφική διεπαφή. Οι θέσεις των μηχανών ανακτώνται από τον πίνακα `coffeMachine` της βάσης δεδομένων (μέθοδος `readMachines`) και τα στοιχεία τους αποθηκεύονται στο λεξικό `machines` της κλάσης Map, ενώ στη συνέχεια με χρήση των συντεταγμένων της μηχανής δημιουργούνται τα γραφικά στοιχεία που αναπαριστούν τις μηχανές του καφέ στη μέθοδο `showMyCoffee`:
 
+```python
+def showMyCoffee(self):
+    self.mapping = {}
+    for id,machine in self.machines.items():
+        self.mapping[id] = self.canvas.create_image(machine['x'], machine['y'], image = self.coffeImg)
+        self.canvas.create_text(machine['x'], machine['y']-35, text=machine["place"], fill='red') 
+```
+
+Στη συνέχεια δίνεται η δυνατότητα ορισμού της αρχικής ημερομηνίας της προσομοίωσης από τον χρήστη. Όταν ξεκινάει η εφαρμογή, η ημερομηνία που εμφανίζεται είναι η σημερινή που ανακτάται από τη βιβλιοθήκη `datetime` ως `self.date = datetime.datetime.now()`.
+
+Το αντικείμενο self.date είναι ένα αντικείμενο τύπου datetime του οποίου μπορούμε να πάρουμε αναπαράσταση ως συμβολοσειρά για να δει ο χρήστης με τη μέθοδο `self.date.strftime("%d-%m-%Y")` που επιβάλει μορφοποίηση της ημερομηνίας ως dd-mm-yyyy.
+
+Στη συνέχεια με χρήση της βιβλιοθήκης tkcalendar (δεν περιέχεται στην τυπική διανομή της Python, και θα πρέπει να εγκατασταθεί με εντολή όπως pip install tkcalendar), η οποία επιτρέπει την επιλογή ημερομηνίας από τον χρήστη:
+
+```python
+def selectDate(self, e):
+    today = self.date
+    def handleDate():
+        self.showDate(cal.selection_get())
+        self.cal.destroy()
+    self.cal = tk.Toplevel(root)
+    cal = Calendar(self.cal, font="Arial 20", selectmode='day', locale='el',
+        year=today.year, month=today.month, day=today.day)
+    cal.pack(fill="both", expand=True)
+    ttk.Button(self.cal, text="ok", command=handleDate).pack()
+```
+
+Το παράδειγμα αυτό καθώς και άλλα παραδείγματα χρήσης της βιβλιοθήκης αυτής μπορείτε να δείτε στο [tkcalendar module documentation](https://pypi.org/project/tkcalendar/).
+
+Το επόμενο θέμα που πρέπει να αντιμετωπίσουμε είναι ο ορισμός του αριθμού ημερών που θα τρέξει η προσομοίωση λειτουργίας της επιχείρησης.
+Αυτό γίνεται με χρήση του διαλόγου για ανάκτηση του ακεραίου (μεταξύ 1 και 20) που αφορά τον αριθμό ημερών της προσομοίωσης. Η εισαγωγή του πλήθους ημερών γίνεται από τον χρήστη όταν επιλέξει το start με χρήση των simpledialog και messagebox.
+Θα πρέπει να σημειωθεί ότι αυτή δεν είναι η πιο καλή λύση ως προς την εμφάνιση, όμως είναι η πιο εύκολη:
+
+<img src='simulationLength.png'>
+
+Όταν ο χρήστης δώσει έγκυρη απάντηση, τότε στη λίστα self.simulation προστίθενται οι ημερομηνίες της προσομοίωσης:
+
+```python
+for i in range(reply):
+    self.simulation.append(self.date + datetime.timedelta(i))
+```
+Να σημειωθεί ότι η μέθοδος timedelta(i) της βιβλιοθήκης datetime προσθέτει i το πλήθος ημέρες σε μια ημερομηνία, χωρίς να αναγκαζόμαστε να κάνουμε τους σύνθετους υπολογισμούς ποια είναι η επόμενη μέρα της 28ης Φεβρουαρίου ενός συγκεκριμένου έτους.
+
+Στη συνέχεια ξεκινάει η προσομοίωση η οποία ενεργοποιείται στη μέθοδο runSimulation η οποία για κάθε μέρα, και για κάθε μηχανή καλεί τη κλάση Controller() του αρχείου simulatedCofeeMaker που καταστκευάσαμε στην προηγούμενη έκδοση του προγράμματός μας, με ορίσματα την ημέρα ως 'yyy-mm-dd' και τον κωδικό της μηχανής. Η κλάση αυτή αφού τρέξει την προσομοίωση λειτουργίας, επιστρέφει ένα λεξικό με τα στατιστικά της λειτουργίας της μηχανής τη συγκεκριμένη μέρα, το οποίο αποθηκεύεται στο λεξικό self.report με κλειδί τη μηχανή και την ημέρα:
+
+```python
+def runSimulation(self):
+    for day in self.simulation:
+        for machine in self.machines:
+            if machine not in self.report: self.report[machine] = {}
+            machineRun = sim.Controller(day.strftime("%Y-%m-%d"), machine)
+            self.report[machine][day.strftime("%Y-%m-%d")] = machineRun.report
+```
+
+Ένα πρόβλημα που ανακύπτει είναι η διάρκεια που θα τρέχει αυτή η προσομοίωση, η γραφική μας εφαρμογή θα μένει "παγωμένη". Για να ξαναπάρουμε τον έλεγχο της εφαρμογής, ενώ η προσομοίωση τρέχει θα πρέπει να εκτελέσουμε τη μέθοδο runSimulation σε ένα νήμα.
+Αυτό γίνεται με χρήση της βιβλιοθήκης threading.
+
+```python
+threading.Thread(target=self.runSimulation).start()
+```
+Ενώ η προσομοίωση τρέχει μπορούμε να αρχίσουμε παράλληλα επιλέγοντας μια μηχανή να παίρνουμε πληροφορίες για την εξέλιξη των πωλήσεων της, αλλά και των αποτυχιών της στην εξυπηρέτηση πελατών λόγω μη διάθεσιμότητας νομισμάτων για ρέστα:
+
+<img src='simulationReporting.png'>
+
+Στο παράδειγμα αυτό φαίνεται ότι το κατάσταστημα της Kavala στις 24-12-2022 είχε πωλήσεις 16,80 ευρώ, πούλησε 8 ροφήματα και είχε 16 αποτυχημένες προσπάθειες (μήνυμα "δέχεται μόνο ακριβή κέρματα), που σημαίνει ότι τα υπόλοιπα κέρματα στο ταμείο είναι περιορισμένα, και δεν είναι σε θέση να δώσει ρέστα.
+
+Τέλος κάτι που είναι ιδιαίτερα χρήσιμο είναι να μπορούμε να επαναφέρουμε τον προσομοιωτή στην αρχική κατάσταση, και αυτό γίνεται με επιλογή του πλήκτρου επαναφοράς. Η επιλογή του ενεργοποιεί τη μέθοδο `resetDB` η οποία εκτελεί το εξωτερικό αρχείο `resetDB.sql`.
+
+```sql
+delete from buy ;
+delete from insertCoins ;
+delete from capacity ;
+delete from coffeMachine ;
+delete from coin ;
+delete from product ;
+INSERT INTO coin VALUES 
+(10, '0.10€'),(20, '0.20€'),(50, '0.50€'),(100, '1€'),(200, '2€'),(500, '5€');
+INSERT INTO product VALUES 
+(1, 'Καφές', 150),(2, 'Καφές με γάλα', 180),(3, 'Σοκολάτα', 210),(4, 'Σοκολάτα με γάλα', 240);
+INSERT INTO coffeMachine VALUES 
+(1, 'Kavala', 514, 114),(2, 'Ioannina', 189, 266),(3, 'Chania', 477, 744),(4, 'Rhodes', 861, 640),(5, 'Larissa', 332, 269),(6, 'Kalamata', 305, 571),(7, 'Athens', 452, 461),(8, 'Heraklion', 579, 763),(9, 'Thessaloniki', 380, 150),(10, 'Patras', 271, 432),(11, 'Mytilene', 709, 331),(12, 'Corfu', 104, 269);
+INSERT INTO capacity VALUES 
+(1, 10, 10, 10),(1, 20, 10, 10),(1, 50, 10, 10),(1, 100, 10, 10),(1, 200, 10, 10),(1, 500, 10, 10),(2, 10, 10, 10),(2, 20, 10, 10),(2, 50, 10, 10),(2, 100, 10, 10),(2, 200, 10, 10),(2, 500, 10, 10),(3, 10, 10, 10),(3, 20, 10, 10),(3, 50, 10, 10),(3, 100, 10, 10),(3, 200, 10, 10),(3, 500, 10, 10),(4, 10, 10, 10),(4, 20, 10, 10),(4, 50, 10, 10),(4, 100, 10, 10),(4, 200, 10, 10),(4, 500, 10, 10),(5, 10, 10, 10),(5, 20, 10, 10),(5, 50, 10, 10),(5, 100, 10, 10),(5, 200, 10, 10),(5, 500, 10, 10),(6, 10, 10, 10),(6, 20, 10, 10),(6, 50, 10, 10),(6, 100, 10, 10),(6, 200, 10, 10),(6, 500, 10, 10),(7, 10, 10, 10),(7, 20, 10, 10),(7, 50, 10, 10),(7, 100, 10, 10),(7, 200, 10, 10),(7, 500, 10, 10),(8, 10, 10, 10),(8, 20, 10, 10),(8, 50, 10, 10),(8, 100, 10, 10),(8, 200, 10, 10),(8, 500, 10, 10),(9, 10, 10, 10),(9, 20, 10, 10),(9, 50, 10, 10),(9, 100, 10, 10),(9, 200, 10, 10),(9, 500, 10, 10),(10, 10, 10, 10),(10, 20, 10, 10),(10, 50, 10, 10),(10, 100, 10, 10),(10, 200, 10, 10),(10, 500, 10, 10),(11, 10, 10, 10),(11, 20, 10, 10),(11, 50, 10, 10),(11, 100, 10, 10),(11, 200, 10, 10),(11, 500, 10, 10),(12, 10, 10, 10),(12, 20, 10, 10),(12, 50, 10, 10),(12, 100, 10, 10),(12, 200, 10, 10),(12, 500, 10, 10);
+```
+
+Θα πρέπει να σημειωθεί εδώ ότι στην τελική έκδοση του αρχείου db.py που χρησιμοποιείται σε αυτή την έκδοση έχει προστεθεί μια νέα μέθοδος executeSQL η οποία χρησιμεύει για την εκτέλεση των παραπάνω εντολών SQL
+
+```python
+    
+    def executeSQL(self, query):
+        try:
+            for statement in query.split(";"):
+                self.cursor.execute(statement)
+            self.con.commit()
+            return True
+        except sqlite3.Error as error:
+            print(f"Σφάλμα εκτέλεσης εντολής SQL", error)
+            return False
+```
+
+Η τελική έκδοση 8 της εφαρμογής μας φαίνεται στη συνέχεια:
+
+``` python
+# myCoffee v.8 προσομοίωση λειτουργίας επιχείρησης
+# περιλαμβάνει ασύγχρονη εκτέλεση της προσομοίωσης
+# επιλογή χρόνου (ημερομηνίας, αριθμού ημερών)
+# παρουσίαση αποτελεσμάτων
+
+import tkinter as tk
+from tkinter import ttk
+import datetime
+import threading
+import time
+from tkcalendar import Calendar
+from tkinter import simpledialog
+from tkinter import messagebox
+import json
+import os
+import db
+import simulatedCofeeMaker as sim
+
+months = {1:"ΙΑΝ", 2:"ΦΕΒ", 3:"ΜΑΡ", 4:"ΑΠΡ", 5:"ΜΑΙ", 6:"ΙΟΥΝ", 7:"ΙΟΥΛ",
+        8:"ΑΥΓ", 9:"ΣΕΠ", 10:"ΟΚΤ", 11:"ΝΟΕ", 12:"ΔΕΚ"}
+
+### the map
+theMap = 'greece.png'
+DATABASE = "myCoffee8.db"
+backColor = "#ffe300"
+padding = 5
+###
+# copy map from https://www.openstreetmap.org/#map=10/38.2444/21.4207&layers=T
+
+class Map(tk.Frame):
+    def __init__(self, map):
+        tk.Frame.__init__(self)
+        self.date = datetime.datetime.now()
+        self.simulation = []
+        self.report = {}
+        self.simDate = None
+        self.shownMachine = None
+        self.pack(expand=True, fill='both')
+        self.img = tk.PhotoImage(file=map)
+        self.coffeImg = tk.PhotoImage(file = 'myCoffee.gif')
+        self.play = tk.PhotoImage(file='play1.gif')
+        self.canvas = tk.Canvas(self, width=self.img.width(), height=self.img.height())
+        self.canvas.pack(expand=True)
+        self.canvas.create_image(0,0, image=self.img, anchor='nw')
+        self.base = tk.PhotoImage(file='base.gif')
+        self.canvas.create_image(self.img.width()-self.base.width(), -padding, \
+            image=self.base, anchor='nw')
+        self.playMenu = self.canvas.create_image(self.img.width()-self.play.width()-2*padding,\
+            2*padding, image=self.play, anchor='nw')
+        self.canvas.tag_bind(self.playMenu,'<Button-1>', lambda e: self.setSimulation(e))
+        self.resetImg = tk.PhotoImage(file='reset1.gif')
+        self.resetMenu = self.canvas.create_image(self.img.width()-self.play.width() - self.resetImg.width()-4*padding,\
+            2*padding, image=self.resetImg, anchor='nw')
+        self.canvas.tag_bind(self.resetMenu,'<Button-1>', lambda e: self.resetDB(e))
+        self.settingsImg = tk.PhotoImage(file='settings1.gif')
+        self.settingsMenu = self.canvas.create_image(self.img.width()-self.play.width()-self.settingsImg.width()- \
+            self.resetImg.width()-6*padding, 2*padding, image=self.settingsImg, anchor='nw')
+        self.dateImg = tk.PhotoImage(file='dateBox.gif')
+        self.dateMenu = self.canvas.create_image(2*padding, 2*padding, image=self.dateImg, anchor='nw')
+        self.canvas.bind('<Button-1>', lambda e: self.showMachine(e))
+        self.showDate()
+        self.db = db.DataModel(DATABASE)
+        self.readMachines()
+        self.showMyCoffee()
+    
+    def resetDB(self, e):
+        try:
+            f = open('resetDB.sql', 'r', encoding='utf-8')
+            query = f.read()
+            if self.db.executeSQL(query):
+                messagebox.showerror('Επιτυχία', "Επιτυχής επαναφορά δεδομένων προσομοίωσης")
+            else: messagebox.showinfo('Προσοχή', "Σφάλμα επαναφοράς δεδομένων προσομοίωσης")
+        except:
+            messagebox.showerror('Προσοχή', "Σφάλμα επαναφοράς δεδομένων προσομοίωσης")
+    
+    def showDate(self, date=None):
+        if date:
+            self.date = date
+        d = f"{self.date.day}-{months[self.date.month]}-{self.date.year}"
+        if not self.simDate:
+            self.simDate = self.canvas.create_text(padding*4, padding*6, text=d, font="Helvetica 40", \
+                fill='black', anchor='nw')
+        else:
+            self.canvas.itemconfig(self.simDate, text=d)
+
+    def selectDate(self, e):
+        today = self.date
+        def handleDate():
+            self.showDate(cal.selection_get())
+            self.cal.destroy()
+        self.cal = tk.Toplevel(root)
+        cal = Calendar(self.cal, font="Arial 20", selectmode='day', locale='el',
+            year=today.year, month=today.month, day=today.day)
+        cal.pack(fill="both", expand=True)
+        ttk.Button(self.cal, text="ok", command=handleDate).pack()
+
+    def showMyCoffee(self):
+        self.mapping = {}
+        for id,machine in self.machines.items():
+            self.mapping[id] = self.canvas.create_image(machine['x'], machine['y'], image = self.coffeImg)
+            self.canvas.create_text(machine['x'], machine['y']-35, text=machine["place"], fill='red')
+
+    def readMachines(self):
+        self.machines = {}
+        machines = self.db.readTable('coffeMachine')
+        for item in machines:
+            self.machines[item['id']] = {'place':item['place'], 'x':item['coordX'], 'y':item['coordY']}
+
+    def setSimulation(self, e):
+        print('we will run a simulation from date', self.date.strftime("%d-%m-%Y"))
+        reply = simpledialog.askinteger(\
+            title = 'Προσομοίωση λειτουργίας...', \
+            prompt = f"Για πόσες μέρες θα θέλατε να τρέξει η \nπροσομοίωση λειτουργίας;\n" +
+                    f"Αρχική ημερομηνία: {self.date.strftime('%d-%m-%Y')},  (1-20 μέρες)")
+        if reply and 1 <= reply <= 20:
+            self.simulation = []
+            self.report = {}
+            for i in range(reply):
+                self.simulation.append(self.date + datetime.timedelta(i))
+            yes = messagebox.askyesno(title="Ημερομηνίες προσομοίωσης λειτουργίας",
+            message="Η προσομοίωση λειτουργίας θα γίνει για τις εξής μέρες, συμφωνείτε;",
+            detail="\n".join(d.strftime("%d-%m-%Y") for d in self.simulation))
+            print(yes)
+            if yes: 
+                threading.Thread(target=self.runSimulation).start() #ξεκινάμε ένα ξεχωριστό νήμα που τρέχει τον προσομοιωτή
+            else: self.simulation = []; self.report = {}
+        else:
+            messagebox.showerror(title = 'Προσομοίωση λειτουργίας...', \
+                message="Παρακαλώ δώστε έγκυρο αριθμό ημερών προσμοίωσης")
+    
+    def runSimulation(self):
+        for day in self.simulation:
+            for machine in self.machines:
+                if machine not in self.report: self.report[machine] = {}
+                machineRun = sim.Controller(day.strftime("%Y-%m-%d"), machine)
+                self.report[machine][day.strftime("%Y-%m-%d")] = machineRun.report
+
+    def showMachine(self, e):
+        print(e.x, e.y)
+        selected = self.canvas.find_withtag("current")
+        print(selected)
+        if selected:
+            for m in self.mapping:
+                if self.mapping[m] == selected[0]:
+                    self.showMachineResults(m)
+                    print (self.machines[m]['place'])
+                    return
+            if selected[0] == self.simDate:
+                self.selectDate(e)
+
+    def showMachineResults(self, m):
+        if self.report:
+            out = f"Κατάσταση μηχανής:{self.machines[m]['place']}\n{45*'-'}\nΗμερομηνία  Ταμείο  Πωλήσεις  Ποτά  Αποτυχίες\n"
+            for d in sorted(self.report[m]):
+                print(d, self.report[m][d])
+                out += f"{d}  {self.report[m][d]['cash']:8.2f}  {self.report[m][d]['sales']:8.2f} {self.report[m][d]['drinks']:6d} {self.report[m][d]['fail']:6d}\n"
+        else:
+            out = f"Δεν υπάρχουν δεδομένα προσομοίωσης λειτουργίας της μηχανής"
+        if self.shownMachine in self.canvas.find_all():
+            self.canvas.delete(self.shownMachine)
+        self.shownMachine = self.canvas.create_text(200,200, anchor='nw', text=out, justify='left', font='Monospace 20')
+        self.canvas.tag_bind(self.shownMachine, "<1>", lambda e: self.canvas.delete(self.shownMachine))
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.resizable(0,0)
+    root.title("MyCoffeeMaker v.8")
+    greece = Map(theMap)
+    root.mainloop()
+
+```
+
+
+### Προεκτάσεις - ασκήσεις
+
+Στο πρότζεκτ αυτό είδαμε διάφορες τυπικές βιβλιοθήκες και μοντέλα προγραμματισμού της γλώσσας προγραμματισμού Python πώς μπροούν να χρησιμοποιηθούν για ανάπτυξη μιας εφαρμογής.
+
+Σαν επέκταση της έκδοσης 8 μπορεί κανείς να δημιουργήσει ένα κέντρο παρακολούθησης των μηχανών πώλησης, ώστε όταν μια μηχανή έχει πουλήσει πάνω από ένα ορισμένο αριθμό ροφημάτων να χρειάζεται επαναφόρτωση, ή όταν οι αποτυχίες στην επιστροφή ρέστων περάσουν ένα ορισμένο ποσοστό των πωλήσεων να ενεργοποιείται ένα σήμα αιτήματος επαναφόρτησης των κερμάτων και απόσυρσης των χαρτονομισμάτων που έχουν συσσωρευτεί στη μηχανή.
 

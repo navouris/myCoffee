@@ -193,7 +193,12 @@ class Controller():
             self.report['sales'] = total/100
             self.report['drinks'] = drinks
             print(out)
+        if txt == "ΤΕΛΙΚΟ": 
+            print("Τελική έκθεση")
+            for i,k in self.report.items():
+                print(i,"\t", k)
         print(50*"=")
+
 
     def run(self):
         # κύριος βρόχος - μενού
@@ -209,8 +214,7 @@ class Controller():
             if selection in Drink.panel.keys():
                 selected = Drink.panel[selection]
                 selected.buy()
-        print(self.report)
-
+        
 # main program
 if __name__ == "__main__": # τρέξε το πρόγραμμα από CLI
     loader = Controller('1821-03-25', 1)
