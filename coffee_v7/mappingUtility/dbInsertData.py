@@ -2,6 +2,11 @@
 τα δεδομένα των μηχανών καφέ, και τα αρχεία coins.txt και drinks.txt
 τυπώνει τις εντολές sql που μπορουν να χρησιμοποιηθούν για αρχικοποίηση της βάσης δεδομένων myCoffee7.db'''
 
+import os
+DIR = os.path.dirname(__file__)
+def relPath(f):
+    return os.path.join(DIR,f)
+
 maxCapacity = 10
 import json
 # διαγραφή των δεδομένων των πινάκων της βάσης
@@ -11,20 +16,20 @@ for table in ['buy', 'insertCoins', 'capacity', 'coffeMachine', 'coin', 'product
 # insert Coin data
 out = f"INSERT INTO coin VALUES \n"
 quantities = {}
-for line in open('coins.txt', 'r', encoding='utf-8'):
+for line in open(relPath('coins.txt'), 'r', encoding='utf-8'):
     (description, value, quantity) = line.strip().split(";")
     out += f"({value}, '{description}'),"
     quantities[int(value)] = int(quantity)
 print(out.rstrip(",")+";")
 # insert Drink data
 out = f"INSERT INTO product VALUES \n"
-for line in open('drinks.txt', 'r', encoding='utf-8'):
+for line in open(relPath('drinks.txt'), 'r', encoding='utf-8'):
     # 1;Καφές;150 
     (id, description, cost) = line.strip().split(';')
     out += f"({id}, '{description}', {cost}),"
 print(out.rstrip(",")+";")
 # insert coffeMachine data
-file = 'greece.json'
+file = relPath('greece.json')
 with open(file, 'r', encoding='utf-8') as f:
     d = json.load(f)
 out = f"INSERT INTO coffeMachine VALUES \n"
@@ -40,6 +45,3 @@ for machine in machines:
     for coin in quantities:
         out += f"({machine}, {coin}, {maxCapacity}, {quantities[coin]}),"
 print(out.rstrip(",")+";")
-
-
-

@@ -3,7 +3,14 @@
 import tkinter as tk
 import datetime as dt
 import sys
-sys.path.insert(1, '../coffee_v4')
+import os
+
+DIR = os.path.dirname(__file__)
+
+def myPath(f): #βοηθητική συνάρτηση για σχετικό μονοπάτι προς τον φάκελο DIR του αρχείου
+    return os.path.join(DIR,f)
+
+sys.path.insert(1, myPath('../coffee_v4'))
 import myCoffee4 as cv # εισάγουμε τις κλάσεις Drink και Coin
 import db # εισάγουμε την κλάση σύνδεσης με τη βάση δεδομένων (αρχείο db.py)
 
@@ -25,11 +32,11 @@ class CofeeMaker():
     def __init__(self, root, id):
         ### φόρτωμα στοιχείων από τη βάση δεδομένων
         self.id = id
-        self.db = db.DataModel("db/myCoffee.db")
+        self.db = db.DataModel(myPath("db/myCoffee.db"))
         self.loadData()
 
         self.welcome = 'Επιλέξτε ρόφημα...'
-        self.drink = tk.PhotoImage(file='drink.gif')
+        self.drink = tk.PhotoImage(file=myPath('drink.gif'))
         self.cup = None # δεν υπάρχει ρόφημα
         self.drinkSelected = None
         self.paid = []
@@ -37,7 +44,7 @@ class CofeeMaker():
         self.root.title('CoffeeMaker v.6')
         self.canvas = tk.Canvas(self.root, width=300, height=525 )
         self.canvas.pack()
-        self.img = tk.PhotoImage(file='coffeemaker3.gif')
+        self.img = tk.PhotoImage(file=myPath('coffeemaker3.gif'))
         self.canvas.create_image(0,0, image=self.img, anchor='nw')
         self.canvas.create_rectangle(30,15, 260, 50, fill='black', outline='grey')
         self.panel = self.canvas.create_text(35,20, anchor='nw', font='TkMenuFont 18', fill='lightgreen')
@@ -64,17 +71,16 @@ class CofeeMaker():
         ''' όρισε τις περιοχές ροφημάτων και την περιοχή 'ακυρο' που ο χρήστης μπορεί να επιλέξει'''
         drinkSize = 70
         self.drinks = {'1':{'coords':[55, 65, 55+drinkSize, 65+drinkSize],
-                        'img':tk.PhotoImage(file="1.gif")},
+                        'img':tk.PhotoImage(file=myPath("1.gif"))},
                         '2': {'coords':[160, 65, 160+drinkSize, 65+drinkSize],
-                        'img':tk.PhotoImage(file="2.gif")},
+                        'img':tk.PhotoImage(file=myPath("2.gif"))},
                         '3': {'coords':[55, 145, 55+drinkSize, 145+drinkSize],
-                        'img':tk.PhotoImage(file="3.gif")},
+                        'img':tk.PhotoImage(file=myPath("3.gif"))},
                         '4': {'coords':[160, 145, 160+drinkSize, 145+drinkSize],
-                        'img':tk.PhotoImage(file="4.gif")}}
+                        'img':tk.PhotoImage(file=myPath("4.gif"))}}
         self.cancel =   [250, 265, 282, 295 ]
 
         for d in self.drinks:
-            print(d)
             self.drinks[d]['area'] = self.canvas.create_image(*self.drinks[d]['coords'][:2], \
                 image=self.drinks[d]['img'], anchor='nw')
             # self.drinks[d]['area'] = self.canvas.create_rectangle(*self.drinks[d]['coords'], fill='', outline='yellow')

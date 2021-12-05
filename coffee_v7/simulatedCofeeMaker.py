@@ -10,8 +10,10 @@
 
 import random
 import db
+import os
 
-DATABASE_FILE = "myCoffee7.db"
+dir = os.path.dirname(__file__)
+DATABASE_FILE = os.path.join(dir,"myCoffee7.db")
 
 class Drink():
     panel = {}
@@ -198,7 +200,6 @@ class Controller():
             for i,k in self.report.items():
                 print(i,"\t", k)
         print(50*"=")
-
 
     def run(self):
         # κύριος βρόχος - μενού

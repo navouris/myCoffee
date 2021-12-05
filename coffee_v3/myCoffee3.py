@@ -1,6 +1,9 @@
 # myCoffeeMaker - έκδοση 3 - κλάσεις
 # στην έκδοση αυτή επίσης τα δεδομένα εισόδου, νομίσματα και ροφήματα περιέχονται σε εξωτερικά αρχεία
 
+import os
+dir = os.path.dirname(__file__)
+
 class Drink():
     '''κλάση για τα ροφήματα που προσφέρει η μηχανή'''
     panel = {} # μεταβλητή κλάσης για αναφορά στα ροφήματα
@@ -62,8 +65,8 @@ class Coin():
 class Controller():
     '''κεντρικός ελεγκτής της εφαρμογής, μόνο ένα στιγμιότυπο της κλάσης'''
     def __init__(self):
-        self.loadDrinks('drinks.txt')
-        self.loadCoins('coins.txt')
+        self.loadDrinks(os.path.join(dir,'drinks.txt'))
+        self.loadCoins(os.path.join(dir,'coins.txt'))
         self.run()
     def loadDrinks(self, filename):
         for drink in open(filename, 'r', encoding='utf8'):

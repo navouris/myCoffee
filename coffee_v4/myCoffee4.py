@@ -3,6 +3,9 @@
 # υλοποίηση  undo σε οποιαδήποτε φάση της πληρωμής
 
 import datetime
+import os
+
+dir = os.path.dirname(__file__)
 
 class Drink():
     panel = {}
@@ -134,8 +137,8 @@ class Coin():
 
 class Controller():
     def __init__(self):
-        self.loadDrinks('drinks.txt')
-        self.loadCoins('coins.txt')
+        self.loadDrinks(os.path.join(dir,'drinks.txt'))
+        self.loadCoins(os.path.join(dir,'coins.txt'))
 
     def loadDrinks(self, filename):
         for drink in open(filename, 'r', encoding='utf8'):

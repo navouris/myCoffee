@@ -5,6 +5,7 @@ import json
 import os
 import http.client, urllib.parse
 
+DIR = os.path.dirname(__file__)
 ### the map
 theMap = 'greece.png'
 ###
@@ -16,9 +17,9 @@ class Map(tk.Frame):
     def __init__(self, map):
         tk.Frame.__init__(self)
         self.pack(expand=True, fill='both')
-        self.img = tk.PhotoImage(file=map)
-        self.coffeImg = tk.PhotoImage(file = 'myCoffee.gif')
-        self.exit = tk.PhotoImage(file='exit.gif')
+        self.img = tk.PhotoImage(file=os.path.join(DIR, map))
+        self.coffeImg = tk.PhotoImage(file = os.path.join(DIR,'myCoffee.gif'))
+        self.exit = tk.PhotoImage(file=os.path.join(DIR,'exit.gif'))
         self.canvas = tk.Canvas(self, width=self.img.width(), height=self.img.height())
         print(self.img.width(), self.img.height())
         self.canvas.pack(expand=True)
@@ -37,14 +38,14 @@ class Map(tk.Frame):
         jsonFile = theMap.rstrip(".png")+".json"
         print('reading from JSON file...', jsonFile)
         if jsonFile in os.listdir():
-            with open(jsonFile, 'r', encoding='utf-8') as f:
+            with open(os.path.join(DIR, jsonFile), 'r', encoding='utf-8') as f:
                 self.mapping = json.load(f)
         else: self.mapping = {}
 
     def saveMapData(self, e):
         if self.mapping:
             jsonObject = json.dumps(self.mapping, indent = 4)
-            with open(theMap.rstrip(".png")+".json", 'w', encoding='utf-8') as f:
+            with open(os.path.join(DIR,theMap.rstrip(".png")+".json"), 'w', encoding='utf-8') as f:
                 f.write(jsonObject)
         root.destroy()
 

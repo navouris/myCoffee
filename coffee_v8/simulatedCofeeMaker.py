@@ -10,8 +10,10 @@
 
 import random
 import db
+import os
+dir = os.path.dirname(__file__)
 
-DATABASE_FILE = "myCoffee8.db"
+DATABASE_FILE = os.path.join(dir, "myCoffee8.db")
 
 class Drink():
     panel = {}

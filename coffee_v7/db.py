@@ -1,4 +1,7 @@
 import sqlite3
+import os
+DIR = os.path.dirname(__file__)
+print(DIR)
 
 class DataModel():
     '''Κλάση σύνδεσης με τη βάση δεδομένων και δημιουργίας δρομέα'''
@@ -92,7 +95,7 @@ class DataModel():
 
 if __name__ == "__main__":
     ################ MYTESTS ########################
-    dbfile = "db/myCoffee.db"
+    dbfile = os.path.join(DIR, "./db/myCoffee7.db")
     #test 1: open db
     d = DataModel(dbfile)
 
