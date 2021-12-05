@@ -139,7 +139,7 @@ class Map(tk.Frame):
     def runSimulation(self):
         # δείξε κίνηση στο γρανάζι...
         self.animate = True
-        threading.Thread(target=self.animateSimulration).start() #ξεκίνα κίνηση γραναζιού
+        threading.Thread(target=self.animateSimulation).start() #ξεκίνα κίνηση γραναζιού
         for day in self.simulation:
             for machine in self.machines:
                 if machine not in self.report: self.report[machine] = {}
@@ -148,7 +148,7 @@ class Map(tk.Frame):
         self.animate = False
         self.canvas.itemconfig(self.settingsMenu, image=self.settingsImg)
 
-    def animateSimulration(self, ind=0):
+    def animateSimulation(self, ind=0):
         if not self.animate: return False
         print(ind)
         frame = self.workingImg[ind]
